@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: white;
+}
+header {
+    text-align: center;
+    padding: 20px;
+    
+}
+nav {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 1% ;
+    display: inline-block;
+    margin: 0 2;
+}
+footer {
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f5f5f5;
+}
+
+.user-profile {
+    background-color: #FFF3E0;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.buttons button {
+    margin-right: 10px;
+}
+button {
+    padding: 8px 15px;
+    margin-right: 10px;
+    cursor: pointer;
+    border: none;
+    font-size: 15px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+form label, form input {
+    display: block;
+    margin-bottom: 10px;
+}
+input {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+a[href="zaloguj.html"] {
+    display: inline-block;
+    float: right;
+    color: #333;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #FFF3E0;
+    margin: 10px;
+    text-decoration: none;
+    box-shadow: 0px 0px 24px -9px rgba(66, 68, 90, 1);
+}
+a[href="wyloguj.html"] {
+    display: inline-block;
+    float: right;
+    color: #333;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #FFF3E0;
+    margin: 10px;
+    text-decoration: none;
+    box-shadow: 0px 0px 24px -9px rgba(66, 68, 90, 1);
+}
+h1
+{
+    text-align: center;
+    bottom: 20% ; 
+}

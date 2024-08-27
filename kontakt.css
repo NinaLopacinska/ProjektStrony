@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: white;
+}
+
+h1 {
+    text-align: center;
+    color: black;
+}
+nav {
+    text-align: center;
+    margin-top: 20px;
+    box-shadow: 0px 0px 24px -9px rgba(66, 68, 90, 1);
+}
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: black;
+}
+a[href="zaloguj.html"] {
+    display: inline-block;
+    float: right;
+    color: #333;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #FFF3E0;
+    margin: 10px;
+    text-decoration: none;
+    box-shadow: 0px 0px 24px -9px rgba(66, 68, 90, 1);
+}
+a[href="wyloguj.html"] {
+    display: inline-block;
+    float: right;
+    color: #333;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #FFF3E0;
+    margin: 10px;
+    text-decoration: none;
+    box-shadow: 0px 0px 24px -9px rgba(66, 68, 90, 1);
+}
+footer {
+    background-color:white ;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+
+.contact-info {
+    text-align: center;
+    margin-top: 20px;
+}
+
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #FFF3E0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.contact-info
+{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #FFF3E0;
+    text-align: left;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+}
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #333;
+    color: #FFF3E0;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+}
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    color: black;
+}

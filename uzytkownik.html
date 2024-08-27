@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blog o psach</title>
+        <meta name="description" content="strona o rasach psów">
+        <meta name="keywords" content="psy, informacje, ciekawoski">
+        <meta name="author" content="Nina Łopacińska"/>
+        <link rel="stylesheet" type="text/css" href="uzytkonik.css">
+        <script>
+        function editUser(userId) {
+
+            var editForm = document.getElementById("editForm" + userId.slice(-1));
+            editForm.style.display = "block";
+
+
+            var userDataElements = document.querySelectorAll("#" + userId + " span");
+            userDataElements.forEach(function(element) {
+                element.style.display = "none";
+            });
+        }
+
+        function saveChanges(userId) {
+
+            var imie = document.getElementById("imieEdit" + userId.slice(-1)).value;
+            var nazwisko = document.getElementById("nazwiskoEdit" + userId.slice(-1)).value;
+            var email = document.getElementById("emailEdit" + userId.slice(-1)).value;
+            var haslo = document.getElementById("hasloEdit" + userId.slice(-1)).value;
+
+            document.getElementById("imie" + userId.slice(-1)).textContent = imie;
+            document.getElementById("nazwisko" + userId.slice(-1)).textContent = nazwisko;
+            document.getElementById("email" + userId.slice(-1)).textContent = email;
+            document.getElementById("haslo" + userId.slice(-1)).textContent = haslo;
+
+
+            document.getElementById("editForm" + userId.slice(-1)).style.display = "none";
+
+            var userDataElements = document.querySelectorAll("#" + userId + " span");
+            userDataElements.forEach(function(element) {
+                element.style.display = "inline";
+            });
+
+            alert("Zapisano zmiany dla użytkownika " + userId);
+        }
+
+        function deleteUser(userId) {
+
+            var userSection = document.getElementById(userId);
+            userSection.remove();
+        }
+    </script>
+    </head>
+    <body>
+        <a href="zaloguj.html">Rejestruj</a>
+        <a href="wyloguj.html">Wyloguj</a>
+        <h1 class="h1" >Blog o psach </h1>
+   
+        <nav>
+            <a href="index.html">Strona główna</a>
+            <a href="arytykul.html">Artykuł</a>
+            <a href="komentarze.html">Komentarze</a>
+            <a href="onas.html">O nas</a>
+            <a href="uzytkownik.html">Użytkonicy</a>
+            <a href="kontakt.html">Kontakt</a>
+        </nav>
+        <section class="user-profile" id="user1">
+            <h2>Użytkownik 1</h2>
+            <p><strong>Imię:</strong> <span id="imie1">Jan</span></p>
+            <p><strong>Nazwisko:</strong> <span id="nazwisko1">Kowalski</span></p>
+            <p><strong>Email:</strong> <span id="email1">jan.kowalski@example.com</span></p>
+            <p><strong>Hasło:</strong> <span id="haslo1">********</span></p>
+    
+            <div class="buttons">
+                <button onclick="editUser('user1')">Edytuj</button>
+                <button onclick="deleteUser('user1')">Usuń konto</button>
+            </div>
+    
+            <form id="editForm1" style="display: none;">
+                <label for="imieEdit1">Imię:</label>
+                <input type="text" id="imieEdit1" name="imieEdit1">
+    
+                <label for="nazwiskoEdit1">Nazwisko:</label>
+                <input type="text" id="nazwiskoEdit1" name="nazwiskoEdit1">
+    
+                <label for="emailEdit1">Email:</label>
+                <input type="email" id="emailEdit1" name="emailEdit1">
+    
+                <label for="hasloEdit1">Hasło:</label>
+                <input type="password" id="hasloEdit1" name="hasloEdit1">
+    
+                <button type="button" onclick="saveChanges('user1')">Zapisz zmiany</button>
+            </form>
+        </section>
+ 
+    <section class="user-profile" id="user2">
+        <h2>Użytkownik 2</h2>
+        <p><strong>Imię:</strong> <span id="imie2">Anna</span></p>
+        <p><strong>Nazwisko:</strong> <span id="nazwisko2">Nowak</span></p>
+        <p><strong>Email:</strong> <span id="email2">anna.nowak@example.com</span></p>
+        <p><strong>Hasło:</strong> <span id="haslo2">********</span></p>
+
+        <div class="buttons">
+            <button onclick="editUser('user2')">Edytuj</button>
+            <button onclick="deleteUser('user2')">Usuń konto</button>
+        </div>
+
+        <form id="editForm2" style="display: none;">
+            <label for="imieEdit2">Imię:</label>
+            <input type="text" id="imieEdit2" name="imieEdit2">
+
+            <label for="nazwiskoEdit2">Nazwisko:</label>
+            <input type="text" id="nazwiskoEdit2" name="nazwiskoEdit2">
+
+            <label for="emailEdit2">Email:</label>
+            <input type="email" id="emailEdit2" name="emailEdit2">
+
+            <label for="hasloEdit2">Hasło:</label>
+            <input type="password" id="hasloEdit2" name="hasloEdit2">
+
+            <button type="button" onclick="saveChanges('user2')">Zapisz zmiany</button>
+        </form>
+    </section>
+
+    <section class="user-profile" id="user3">
+        <h2>Użytkownik 3</h2>
+        <p><strong>Imię:</strong> <span id="imie3">Marek</span></p>
+        <p><strong>Nazwisko:</strong> <span id="nazwisko3">Wiśniewski</span></p>
+        <p><strong>Email:</strong> <span id="email3">marek.wisniewski@example.com</span></p>
+        <p><strong>Hasło:</strong> <span id="haslo3">********</span></p>
+
+        <div class="buttons">
+            <button onclick="editUser('user3')">Edytuj</button>
+            <button onclick="deleteUser('user3')">Usuń konto</button>
+        </div>
+
+        <form id="editForm3" style="display: none;">
+            <label for="imieEdit3">Imię:</label>
+            <input type="text" id="imieEdit3" name="imieEdit3">
+
+            <label for="nazwiskoEdit3">Nazwisko:</label>
+            <input type="text" id="nazwiskoEdit3" name="nazwiskoEdit3">
+
+            <label for="emailEdit3">Email:</label>
+            <input type="email" id="emailEdit3" name="emailEdit3">
+
+            <label for="hasloEdit3">Hasło:</label>
+            <input type="password" id="hasloEdit3" name="hasloEdit3">
+
+            <button type="button" onclick="saveChanges('user3')">Zapisz zmiany</button>
+        </form>
+    </section>
+        
+        <footer>
+            <p>&copy; 2023 Blog o psach. Wszelkie prawa zastrzeżone.</p>
+        </footer>
+
+    </section>  
+    <script src="script.js"></script>
+    </body>
+</html>

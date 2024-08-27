@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blog o psach</title>
+        <link rel="stylesheet" type="text/css" href="zaloguj.css">
+
+    </head>
+    <body>
+        <script>
+            var userData = {};
+        function goToHome() 
+            {
+                window.location.href = "index.html" 
+            }
+        function registerUser() {
+            var imie = document.getElementById("imie").value;
+            var nazwisko = document.getElementById("nazwisko").value;
+            var email = document.getElementById("email").value;
+            var haslo = document.getElementById("haslo").value;
+            var telefon = document.getElementById("telefon").value;
+            var notatkaBio = document.getElementById("notatkaBio").value;
+            var userInfo = document.getElementById("userInfo");
+            userInfo.innerHTML = `
+                <h2>Twoje dane:</h2>
+                <p><strong>Imię:</strong> ${imie}</p>
+                <p><strong>Nazwisko:</strong> ${nazwisko}</p>
+                <p><strong>Email:</strong> ${email}</p>
+                <p><strong>Hasło:</strong> ${haslo}</p>
+                <p><strong>Telefon:</strong> ${telefon}</p>
+                <p><strong>Notatka bio:</strong> ${notatkaBio}</p>
+            `; }
+        </script>
+        <article1>
+            <div class="goToHome" onclick="goToHome()">&#10229</div>
+        </article1>
+        <a href="wyloguj.html">Wyloguj</a>
+        <h1 class="h1" >Blog o psach </h1>
+        <nav>
+            <a href="index.html">Strona główna</a>
+            <a href="arytykul.html">Artykuł</a>
+            <a href="komentarze.html">Komentarze</a>
+            <a href="onas.html">O nas</a>
+            <a href="uzytkownik.html">Użytkonicy</a>
+            <a href="kontakt.html">Kontakt</a>
+        </nav>
+        
+        <form action="" method="get" onsubmit="event.preventDefault(); registerUser();">
+            <p>Imie: <input type="text" id="imie" size="20" maxlength="100" required placeholder="Podaj imie"></p>
+            <p>Nazwisko: <input type="text" id="nazwisko" size="20" maxlength="100" required placeholder="Podaj nazwisko"></p>
+            <p>Email: <input type="email" id="email" size="20" maxlength="30" required placeholder="Podaj email"></p>
+            <p>Hasło: <input type="password" id="haslo"  size="20" maxlength="20" required placeholder="Podaj hasło"></p>
+            <p>Telefon: <input type="number" id="telefon"  size="20" maxlength="9" required placeholder="Podaj numer telefonu"></p>
+            <p>Zdjęcie: <input id="file" accept="image/*" type="file" id="zdjecie" size="20" maxlength="20" required placeholder="Dodaj zdjęcie"></p>
+            <p>Notatka bio:</p>
+            <textarea id="notatkaBio" rows="10" cols="40" required placeholder="Opowiedz o sobie"></textarea>
+            <p><input type="submit" value="Zarejestruj się"></p>
+        </form>
+        <div id="userInfo"></div>
+        <footer>
+            <p>&copy; 2023 Blog o psach. Wszelkie prawa zastrzeżone.</p>
+        </footer>
+
+    </body>
+    </html>

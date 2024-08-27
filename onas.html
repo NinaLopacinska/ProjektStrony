@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <title>Blog o psach</title>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <meta name="description" content="strona o rasach psów">
+        <meta name="keywords" content="psy, informacje, ciekawoski">
+        <meta name="author" content="Nina Łopacińska"/>
+        <link rel="stylesheet" type="text/css" href="onas.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+    <body>
+
+        <h1 class="h1" >Blog o psach </h1>
+   
+        <nav>
+            <a href="index.html">Strona główna</a>
+            <a href="arytykul.html">Artykuł</a>
+            <a href="komentarze.html">Komentarze</a>
+            <a href="onas.html">O nas</a>
+            <a href="uzytkownik.html">Użytkonicy</a>
+            <a href="kontakt.html">Kontakt</a>
+        </nav>
+        <section>
+            <h2>Autorka</h2>
+            <p>Nina Łopacińska</p>
+            <p>Nr indeksu: 406341</p>
+            <p>Przedmiot: Podstawy technologii internetowych. Labolatorium gr. 4</p>
+            <p>Rok akademicki: 2023/24</p>
+            <p>Nazwa przeglądarki: Google Chrome</p>
+            <P>Wersja przeglądarki: Wersja 120.0.6099.225 (Oficjalna wersja) (64-bitowa)</P>
+            <div class="box">
+                <p>Specyfikacja projektu:
+                <a href="Specyfikacja projektu.docx" download="Specyfikacja\Specyfikacja projektu.docx">Pobierz specyfikację</a></p>
+            </div>
+            <h1>Wykres Częstości Odwiedzania</h1>
+    
+    <canvas id="myChart" width="1000" height="200"></canvas>
+
+    <script>
+
+        var data = {
+            labels: ["Styczeń", "Luty", "Marzec", "Kwiecień", "Maj", "Czerwiec", "Lipiec", "Sierpień", "Wrzesień", "Październik", "Listopad", "Grudzień"],
+            datasets: [{
+                label: 'Liczba odwiedzin',
+                data: [120, 150, 200, 180, 250, 300, 280, 320, 280, 200, 150, 180],
+                backgroundColor: 'rgba(75, 192, 192, 0.2)', 
+                borderColor: 'rgba(75, 192, 192, 1)', 
+                borderWidth: 3 
+            }]
+        };
+
+        var options = {
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    title: {
+                        display: true,
+                        text: 'Liczba odwiedzin'
+                    }
+                }
+            }
+        };
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: data,
+            options: options
+        });
+    </script>
+            <h3>Cel</h3>
+            <p>Jestem pasjonatką zwierząt, a moim celem jest dostarczanie wiadomości i informacji na temat opieki nad zwierzętami, a w szczególności psami. Chce dzielić się wiedzą na temat różnych ras, zdrowia, karmienia i szkolenia psów.</p>
+    
+            <h3>Moja historia jako właściecielki psa!</h3>
+            <p>Jestem pasjonatem zwierząt i dumnie dzielę się moją historią z Tobą. Od siedmiu lat moim wiernym towarzyszem jest Ron, owczarek szkocki długowłosy. Ta niezwykła rasa ma swoje korzenie również w filmowym świecie, ponieważ owczarek szkocki był inspiracją dla postaci z filmu "Lassie wróć" z 1943 roku. </p>
+            <p>Z Ronem dzielę nie tylko miłość, ale także niesamowite chwile pełne radości i lojalności. Jego długa, jedwabista sierść i inteligentne spojrzenie sprawiają, że jest nie tylko doskonałym towarzyszem, ale także prawdziwym przyjacielem i wsparciem w moim życiu.</p>
+            <p>Na tej stronie staramy się dzielić naszą pasją do zwierząt, przekazując informacje na temat opieki nad psami, różnych ras oraz ciekawostek ze świata czworonogów. Mam nadzieję, że znajdziesz tutaj inspirację i cenne wskazówki dotyczące życia z psem, tak jak ja z Ronem.</p>
+            <p></p>
+            <div id="Zdjecie">
+                <img src="psy-rasowe-768x475.jpg" alt="Zdjecie psów" >
+                </div>
+
+        </section>
+        
+        <footer>
+            <p>&copy; 2023 Blog o psach. Wszelkie prawa zastrzeżone.</p>
+        </footer>
+    </body>
+</html>

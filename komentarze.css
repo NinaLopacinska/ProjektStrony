@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: white;
+}
+
+h1 {
+    text-align: center;
+    color: black;
+}
+nav {
+    text-align: center;
+    margin-top: 20px;
+    box-shadow: 0px 0px 24px -9px rgba(66, 68, 90, 1);
+}
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: black;
+}
+a[href="zaloguj.html"] {
+    display: inline-block;
+    float: right;
+    color: #333;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #FFF3E0;
+    margin: 10px;
+    text-decoration: none;
+    box-shadow: 0px 0px 24px -9px rgba(66, 68, 90, 1);
+}
+a[href="wyloguj.html"] {
+    display: inline-block;
+    float: right;
+    color: #333;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #FFF3E0;
+    margin: 10px;
+    text-decoration: none;
+    box-shadow: 0px 0px 24px -9px rgba(66, 68, 90, 1);
+}
+footer {
+    background-color:white ;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+section {
+    margin-top: 20px;
+}
+
+article {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 0px 24px -9px rgba(66, 68, 90, 1);
+    background-color: #FFF3E0;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    resize: vertical;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 15px;
+     text-align: center;
+    border-radius: 4px;
+
+}
+
+button:hover {
+    background-color: #555;
+}
+
+#comments {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.comment {
+    margin-bottom: 10px;
+}

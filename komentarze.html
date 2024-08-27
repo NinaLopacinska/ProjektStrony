@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blog o psach</title>
+        <link rel="stylesheet" type="text/css" href="komentarze.css">
+
+    </head>
+    <body>
+        <script>
+            function goToHome() 
+            {
+                window.location.href = "index.html" 
+            }
+        </script>
+        <article1>
+            <div class="goToHome" onclick="goToHome()">&#10229</div>
+        </article1>
+        <a href="zaloguj.html">Rejestruj</a>
+        <a href="wyloguj.html">Wyloguj</a>
+        <h1 class="h1" >Blog o psach </h1>
+        <nav>
+            <a href="index.html">Strona główna</a>
+            <a href="arytykul.html">Artykuł</a>
+            <a href="komentarze.html">Komentarze</a>
+            <a href="onas.html">O nas</a>
+            <a href="uzytkownik.html">Użytkonicy</a>
+            <a href="kontakt.html">Kontakt</a>
+
+        </nav>
+        <section>
+            <article>
+                <h2>Witaj w sekcji komentarzy!</h2>
+                <p>Podziel się swoją opinią, przemyśleniami lub doświadczeniami na temat psów.</p>
+            
+    
+         
+            <form id="commentForm">
+                <label for="author">Autor:</label>
+                <input type="text" id="author" name="author" required>
+                <p></p>
+                <label for="comment">Komentarz:</label>
+                <textarea id="comment" name="comment" rows="4" required></textarea>
+    
+                <button type="button" onclick="addComment()">Dodaj Komentarz</button>
+            </form>
+            </article>
+           
+            <div id="comments">
+            <div class="comment">
+                <p><strong>Anna_Kowalska:</strong> Nie mogę się doczekać, aby przeczytać więcej artykułów o naszych niesamowitych czworonożnych przyjaciołach! Moja ulubiona rasa to border collie - inteligentne, energiczne i niesamowicie oddane. Czy ktoś ma podobne doświadczenia z tą rasą? Podzielcie się swoimi historiami!</p>
+            </div>
+            
+        </section>
+        <script>
+            function addComment() {
+                var author = document.getElementById("author").value;
+                var commentText = document.getElementById("comment").value;
+    
+                if (author && commentText) {
+                    var commentContainer = document.getElementById("comments");
+    
+     
+                    var comment = document.createElement("div");
+                    comment.className = "comment";
+                    comment.innerHTML = "<strong>" + author + ":</strong> " + commentText;
+ 
+                    commentContainer.appendChild(comment);
+    
+                  
+                    document.getElementById("commentForm").reset();
+                } else {
+                    alert("Proszę wypełnić wszystkie pola formularza.");
+                }
+            }
+           
+        </script>
+        
+        <footer>
+            <p>&copy; 2023 Blog o psach. Wszelkie prawa zastrzeżone.</p>
+        </footer>
+
+    </body>
+    </html>
